@@ -13,6 +13,7 @@ Performance numbers: The dataset has 517,401 email files. Took 20 mins to build 
 
 Here is a sample run with 12 randomly selected email files. You may change the FILE_PREFIX to run on your own machine. Please take a look at the attached code.
 
+```
 VIKSUBRA-M-83ZG:project viksubra$ python3 enron_search.py
 Step 1: Built the trie!
 Step 2_1: Serialized trie to:  /Users/viksubra/git/codeprep/apple/serialized_trie.bin
@@ -58,3 +59,4 @@ Searching for prefix:  sto
 []
 -------------------
 Done! :-)
+```
