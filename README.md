@@ -1,6 +1,9 @@
 # enron-search
 Type-ahead Search Engine with Auto-Complete for Textual Big Data
 
+This is a search tool on the Enron email database published at https://www.cs.cmu.edu/~./enron/. The code ingests the entire email file as a text file without any special parsing of the header. The path of the email file (such as `maildir/scholtes-d/stf/8.`) is the id of that email.
+
+
 Some brief design decisions:
 1) to serialize the node array, I am using Python's basic array module that gives C-like access to primitive types (4 bytes for int).
 2) keeping track of email_ids (integers) as a separate serialized file. No limit on the number of email_ids that can be stored.
