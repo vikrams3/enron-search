@@ -1,7 +1,10 @@
 # enron-search
 **Type-ahead Search Engine with Auto-Complete for Textual Big Data**
 
-This is a search tool on the Enron email database published at https://www.cs.cmu.edu/~./enron/. The code ingests the entire email file as a text file without any special parsing of the header. The path of the email file (such as `maildir/scholtes-d/stf/8.`) is the id of that email.
+This is a search tool on the Enron email database published at https://www.cs.cmu.edu/~./enron/. The code ingests the entire email file as a text file without any special parsing of the header. The path of the email file (such as `maildir/scholtes-d/stf/8.`) is the id of that email. Some features:
+1) Parses the email data into a prefix trie, serializes into the disk.
+2) Searches realtime for keywords with disk seeks(), along with auto-complete suggestions for prefix searches.
+3) Optimized for low memory systems like a phone, with the trie being stored in SSD.
 
 
 Some brief design decisions:
