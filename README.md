@@ -13,10 +13,9 @@ Some brief design decisions:
 6) uses BFS to serialize the trie, and DFS after the prefix has been matched to suggest auto-completion words.
 7) TrieNode in memory uses a map (instead of a 26-size array) for every character offset, because it is a sparse array (any node would rarely have a fan-out of 26, if ever). However, the serialized node on the disk will have a 32-int array, one for each character, to allow for direct indexing is the fastest format for search/seek() purposes.
 
-Performance numbers: The dataset has 517,401 email files. Took 20 mins to build a trie on my MacBook Pro on the entire dataset (2.2 GHz, 6-Core Intel Core i7, 16 GB RAM).
+**Performance numbers**: The dataset has 517,401 email files. Took 20 mins to build a trie on my MacBook Pro on the entire dataset (2.2 GHz, 6-Core Intel Core i7, 16 GB RAM).
 
-Here is a sample run with 12 randomly selected email files. You may change the FILE_PREFIX to run on your own machine. Please take a look at the attached code.
-
+**Sample run**: With 12 randomly selected email files. `FILE_PREFIX` can be changed appropriately to run on a different machine.
 ```
 VIKSUBRA-M-83ZG:project viksubra$ python3 enron_search.py
 Step 1: Built the trie!
